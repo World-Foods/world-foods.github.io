@@ -339,9 +339,7 @@
                            <textarea class="textarea" placeholder="Message" type="type" name="entry.1131245875" id="entry.1131245875"></textarea>
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn">Send
-                              <input type="submit">
-                           </button>
+                           <button class="send_btn" onclick="submitted=true;" type="submit">Submit</button>
                         </div>
                      </div>
                   </form>
@@ -445,7 +443,7 @@
       <script type="text/javascript">
          $('#gform').on('submit', function(e) {
             $('#gform *').fadeOut(2000);
-            $('#gform').prepend('Your submission has been processed...');
+            $('#gform').prepend('Thanks for reaching out to us!');
          });
       </script>
       <script src="js/bootstrap.bundle.min.js"></script>
