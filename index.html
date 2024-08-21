@@ -461,8 +461,9 @@
       <script type="text/javascript">var submitted=false;</script>
       <script type="text/javascript">
          $('#request').on('submit', function(e) {
-         $('#request').prepend('Your submission has been processed...');
          $('#request *').fadeOut(2000);
+         $("#request").append('<div>Thanks '
+            + 'for reaching out to us!</div>'); 
          
       });
       </script>
