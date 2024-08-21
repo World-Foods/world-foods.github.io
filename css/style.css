@@ -663,13 +663,6 @@ ul.conta_top li a {
 
 
 /** contact **/
-.fade-out {
-     -webkit-transition: opacity 3s ease-in-out;
-     -moz-transition: opacity 3s ease-in-out;
-     -ms-transition: opacity 3s ease-in-out;
-     -o-transition: opacity 3s ease-in-out;
-     opacity: 0;
-}
 
 .contact {
      padding-bottom: 90px;

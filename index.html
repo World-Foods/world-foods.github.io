@@ -339,20 +339,11 @@
                            <textarea class="textarea" placeholder="Message" type="type" name="entry.1131245875" id="entry.1131245875"></textarea>
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn" id="lnk1" type="submit">Send</button>
+                           <button class="send_btn" id="submitButton" type="submit">Submit</button>
                         </div>
                      </div>
                   </form>
 					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-               </div>
-            </div>
-         </div>
-         <div class="container" id="div2">
-            <div class="row ">
-               <div class="col-md-12">
-                  <div class="titlepage text_align_center">
-                     <h2>Thanks for reaching out!</h2>
-                  </div>
                </div>
             </div>
          </div>
@@ -448,11 +439,19 @@
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script><script type="text/javascript">var submitted=false;</script>
-      <script type="text/javascript">
-         function hide(elem) {
-            elem.classList.add("fade-out")
+      <script type="text/javascript" src="Scripts/jquery-2.0.3.js"></script>
+      <script type="text/javascript" src="Scripts/jquery-ui-1.10.3.js"></script>
+
+      <script>
+         function submitButton_OnClick() {
+            $("#submitButton").text("Thanks!");
+            $("#submitButton").attr("disabled", "disabled");
          }
+
+         $(document).ready(function() {
+            $("#submitButton").click(submitButton_OnClick);
+         });
+
       </script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>

@@ -124,15 +124,3 @@ function closeNav() {
           $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
         });
     });
-
-    $(document).ready(function() {
-      var h1 = $("#div1").height();
-      var h2 = $("#div2").height();
-      $("#div1,#div2").height(Math.max(h1, h2));
-      $("#div2").hide();
-    });
-    
-    $("#lnk1").live('click', function() {
-        $("#div1").show();
-        $("#div2").hide();
-    });
