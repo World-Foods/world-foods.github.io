@@ -274,7 +274,8 @@ File Name: responsive.css
 		 font-size: 17px;
 		 background: #d96226;
 		 max-width: 171px;
-		 margin-left: 34%;
+		 margin-left: auto;
+		 margin-right: auto;
 		 width: 100%;
 		 height: 48px;
 		 display: block;
