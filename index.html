@@ -339,7 +339,7 @@
                            <textarea class="textarea" placeholder="Message" type="type" name="entry.1131245875" id="entry.1131245875"></textarea>
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn" id="submitButton" type="submit">Submit</button>
+                           <button class="send_btn" onclick="hide(this.parentNode)" type="submit">Submit</button>
                         </div>
                      </div>
                   </form>
@@ -347,7 +347,7 @@
                </div>
             </div>
          </div>
-
+      </div>
       <!-- contact -->
       <!-- honey_bg -->
       <div class="honey_bg">
@@ -439,19 +439,11 @@
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
-      <script type="text/javascript" src="Scripts/jquery-2.0.3.js"></script>
-      <script type="text/javascript" src="Scripts/jquery-ui-1.10.3.js"></script>
-
-      <script>
-         function submitButton_OnClick() {
-            $("#submitButton").text("Thanks!");
-            $("#submitButton").attr("disabled", "disabled");
+      <script src="js/jquery.min.js"></script><script type="text/javascript">var submitted=false;</script>
+      <script type="text/javascript">
+         function hide(elem) {
+            elem.classList.add("fade-out")
          }
-
-         $(document).ready(function() {
-            $("#submitButton").click(submitButton_OnClick);
-         });
-
       </script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
