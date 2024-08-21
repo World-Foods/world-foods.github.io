@@ -725,6 +725,11 @@ ul.conta_top li a {
      opacity: 1;
 }
 
+#newElement {
+     text-align: center;
+     font-size: 18px;
+}
+
 
 /** end contact **/
 
