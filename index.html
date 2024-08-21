@@ -339,7 +339,7 @@
                            <textarea class="textarea" placeholder="Message" type="type" name="entry.1131245875" id="entry.1131245875"></textarea>
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn" type="submit">Submit</button>
+                           <button class="send_btn" id="submitButton">Send</button>
                         </div>
                      </div>
                   </form>
@@ -439,14 +439,23 @@
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script><script type="text/javascript">var submitted=false;</script>
-      <script type="text/javascript">
-         function hide(elem) {
-            elem.classList.add("fade-out")
-         }
-      </script>
+      <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
+      <script type="text/javascript" src="Scripts/jquery-2.0.3.js"></script>
+      <script type="text/javascript" src="Scripts/jquery-ui-1.10.3.js"></script>
+
+      <script>
+         function submitButton_OnClick() {
+            $("#submitButton").text("Thanks!");
+            $("#submitButton").attr("disabled", "disabled");
+         }
+
+         $(document).ready(function() {
+            $("#submitButton").click(submitButton_OnClick);
+         });
+
+      </script>
       <!-- sidebar -->
       <script src="js/custom.js"></script>
    </body>
