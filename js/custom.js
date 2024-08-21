@@ -124,3 +124,5 @@ function closeNav() {
           $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
         });
     });
+
+    
