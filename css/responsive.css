@@ -25,6 +25,15 @@ File Name: responsive.css
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .board .read_more {
+        margin-top: 55px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+        max-width: 250px;
+        height: 65px;
+        line-height: 65px;
+   }
     .relative {
         text-align: center;
    }
