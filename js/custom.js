@@ -124,3 +124,21 @@ function closeNav() {
           $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
         });
     });
+
+    var btn = document.getElementById("request");
+    var timerID = 0;
+
+    function hide(elem) {
+      var opacity =
+        Number(window.getComputedStyle(elem).getPropertyValue("opacity"));
+      if (opacity > 0) {
+        opacity = opacity - 0.1;
+        console.log(opacity);
+        elem.style.opacity = opacity;
+        /* you can simply comment out the setTimeout function  and see that the 
+        opacity reduces on every click of the <button> */
+        setTimeout(hide(elem), 2000);
+      } else {
+        clearTimeout(timerID);
+      }
+    }
