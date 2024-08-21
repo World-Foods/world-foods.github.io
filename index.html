@@ -339,7 +339,7 @@
                            <textarea class="textarea" placeholder="Message" type="type" name="entry.1131245875" id="entry.1131245875"></textarea>
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn" type="submit">Send</button>
+                           <button class="send_btn" type="submit">Submit</button>
                         </div>
                      </div>
                   </form>
@@ -460,9 +460,9 @@
       <script src="js/jquery.min.js"></script>
       <script type="text/javascript">var submitted=false;</script>
       <script type="text/javascript">
-         $('.send_btn').on('submit', function(e) {
-         $('.send_btn *').fadeOut(2000);
-         $('.send_btn').prepend('Your submission has been processed...');
+         $('#request').on('submit', function(e) {
+         $('#request *').fadeOut(2000);
+         $('#request').prepend('Your submission has been processed...');
       });
       </script>
       <!-- sidebar -->
