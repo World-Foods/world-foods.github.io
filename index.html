@@ -339,7 +339,7 @@
                            <textarea class="textarea" placeholder="Message" type="type" name="entry.1131245875" id="entry.1131245875"></textarea>
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn" id="submitButton">Send</button>
+                           <button class="send_btn" type="submit" id="submitButton">Submit</button>
                         </div>
                      </div>
                   </form>
@@ -455,6 +455,15 @@
             $("#submitButton").click(submitButton_OnClick);
          });
 
+      </script>
+
+      <script src="js/jquery.min.js"></script>
+      <script type="text/javascript">var submitted=false;</script>
+      <script type="text/javascript">
+      $('#submitButton').on('submit', function(e) {
+      $('#submitButton *').fadeOut(2000);
+      $('#submitButton').prepend('Your submission has been processed...');
+      });
       </script>
       <!-- sidebar -->
       <script src="js/custom.js"></script>
