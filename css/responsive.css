@@ -9,6 +9,13 @@ File Name: responsive.css
     #carouselExampleIndicators .carousel-control-prev {
         left: 38%;
     }
+	
+	html, body {
+	  overflow-x: hidden;
+	}
+	body {
+	  position: relative
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -22,6 +29,13 @@ File Name: responsive.css
     .inner_page .navigation.navbar-dark .navbar-nav .nav-link {
         padding: 7px 25px;
     }
+	
+	html, body {
+	  overflow-x: hidden;
+	}
+	body {
+	  position: relative
+	}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -108,6 +122,13 @@ File Name: responsive.css
     .inner_page ul.email li {
         padding: 0px 15px;
     }
+	
+	html, body {
+	  overflow-x: hidden;
+	}
+	body {
+	  position: relative
+	}
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -241,6 +262,13 @@ File Name: responsive.css
     .inner_page .navigation.navbar-expand-md .navbar-nav {
         flex-direction: column !important;
     }
+	
+	html, body {
+	  overflow-x: hidden;
+	}
+	body {
+	  position: relative
+	}
 }
 
 @media (max-width: 575px) {
@@ -395,4 +423,11 @@ File Name: responsive.css
     .inner_page .navigation.navbar-expand-md .navbar-nav {
         flex-direction: column !important;
     }
+	
+	html, body {
+	  overflow-x: hidden;
+	}
+	body {
+	  position: relative
+	}
 }
