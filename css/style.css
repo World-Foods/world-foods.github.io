@@ -634,6 +634,10 @@ ul.conta_top li a {
      padding-top: 90px;
 }
 
+.caterpage {
+     padding-top: 90px;
+}
+
 .quality .titlepage p {
      padding-top: 15px !important;
      line-height: 30px;
@@ -986,3 +990,8 @@ ul.conta li a:hover {
 .inner_page .honey_bg {
      padding-top: 90px;
 }
+
+.catermenu {
+	padding-left: 8%;
+}
+

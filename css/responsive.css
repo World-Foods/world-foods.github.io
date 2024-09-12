@@ -430,4 +430,24 @@ File Name: responsive.css
 	body {
 	  position: relative
 	}
+	
+	/*iframe*/
+	.responsive-iframe {
+	  width: 100%;
+	  height: 490px;
+	  top: 0;
+	}
+	
+	.catermenu {
+	padding-top: 0%;
+	padding-left: 0%;
+	}
+	
+	.caterpage {
+     padding-top: 0px;
+	}
+	ul.conta_top li {
+        padding-right: 10px;
+        font-size: 14px;
+    }
 }
