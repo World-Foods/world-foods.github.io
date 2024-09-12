@@ -291,6 +291,23 @@ button .menu_button:hover {
 	 margin: auto;
 }
 
+.read_more3 {
+	font-size: 17px;
+     background: #c1252c;
+     max-width: 171px;
+     width: 100%;
+     height: 48px;
+     display: block;
+     line-height: 48px;
+     transition: ease-in all 0.5s;
+     font-weight: 400;
+     text-align: center;
+     color: #fff;
+     z-index: 999;
+     border-radius: 30px;
+	 margin: auto;
+}
+
 .read_more:hover,.read_more2:hover {
      background: #1b7441;
      color: #fff;
@@ -995,3 +1012,36 @@ ul.conta li a:hover {
 	padding-left: 8%;
 }
 
+.button-container {
+	display: flex;
+}
+
+/* popup*/
+	   .popup {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: none;
+        }
+
+        .popup-content {
+            background-color: white;
+            margin: 20% auto;
+            padding: 20px;
+            border: 1px solid #888888;
+            width: 30%;
+            font-weight: bolder;
+        }
+
+        .popup-content button {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .show {
+            display: block;
+        }

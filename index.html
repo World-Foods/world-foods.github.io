@@ -170,7 +170,10 @@
                                                    Follow us!
                                                 </h3>
                                                 <p>Keep up with our daily specials, events, &amp; what we're up to on Facebook &amp; Instagram!</p>
-                                                <a class="read_more" href="">Social Media</a>
+												 <div class="button-container">
+                                                	<a class="read_more" href="https://www.facebook.com/WorldFoodsTN"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+													 <a class="read_more" href="https://www.instagram.com/world.foods.cookeville/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+												 </div>
                                              </div>
                                           </div>
                                           <div class="col-md-5">
@@ -190,8 +193,19 @@
                                                 <h3>
                                                    Discounts!
                                                 </h3>
-                                                <p>First Responders, TTU faculty/students, CRMC employees, &amp; veterans receive a 15% discount!</p>
-                                                <a class="read_more" href="">More Info</a>
+                                                <p>First Responders, TTU faculty/students, CRMC employees, &amp; veterans receive a 10% discount!</p>
+                                                <a class="read_more" id="myButton">More Info</a>
+												 <div id="myPopup" class="popup">
+													<div class="popup-content">
+														<h1 style="color: black">
+															We want you to know
+														</h1>
+														<p style="color: black">We appreciate all that you do for our community! Stop in at any time with an ID showing you are a first responder, TTU Faculty/Student, CRMC employee, or a veteran and we will gladly take 10% off of your meal!</p>
+														<button id="closePopup">
+															Close
+														</button>
+													</div>
+												</div>
                                              </div>
                                           </div>
                                           <div class="col-md-5">
@@ -459,6 +473,32 @@
          
       });
       </script>
+	  <script>
+        myButton.addEventListener(
+            "click",
+            function () {
+                myPopup.classList.add("show");
+            }
+        );
+        closePopup.addEventListener(
+            "click",
+            function () {
+                myPopup.classList.remove(
+                    "show"
+                );
+            }
+        );
+        window.addEventListener(
+            "click",
+            function (event) {
+                if (event.target == myPopup) {
+                    myPopup.classList.remove(
+                        "show"
+                    );
+                }
+            }
+        );
+    </script>
       <!-- sidebar -->
       <script src="js/custom.js"></script>
    </body>
