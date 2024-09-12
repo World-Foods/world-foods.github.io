@@ -341,9 +341,9 @@ File Name: responsive.css
     .di_mr0 {
         display: inherit;
     }
-    .slider_main {
+    /* .slider_main {
         padding-top: 15%;
-    }
+    } */
     .banner_img {
         padding-right: 0px;
     }
