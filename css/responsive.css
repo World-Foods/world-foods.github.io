@@ -288,8 +288,12 @@ File Name: responsive.css
         height: 65px;
         line-height: 65px;
     } */
+	.carousel-caption {
+		top: 10px;
+	}
 	.relative {
      	text-align: center;
+		
 	}
 	.read_more {
 		 font-size: 17px;
@@ -355,10 +359,10 @@ File Name: responsive.css
     .banner_img {
         padding-right: 0px;
     }
-    /* .relative h3 {
+     .relative h3 {
         font-size: 35px;
         line-height: 42px;
-    } */
+    } 
     #carouselExampleIndicators .carousel-control-prev {
         left: 27%;
     }
