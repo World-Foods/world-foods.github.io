@@ -655,6 +655,10 @@ ul.conta_top li a {
      padding-top: 90px;
 }
 
+.menupage {
+     padding-top: 45px;
+}
+
 .quality .titlepage p {
      padding-top: 15px !important;
      line-height: 30px;
@@ -694,6 +698,11 @@ ul.conta_top li a {
 /** contact **/
 
 .contact {
+     padding-bottom: 90px;
+     padding-top: 88px;
+}
+
+.menumain {
      padding-bottom: 90px;
      padding-top: 88px;
 }
@@ -1045,3 +1054,19 @@ ul.conta li a:hover {
         .show {
             display: block;
         }
+
+.menu1 {
+	width: 1200px;
+	max-height: 1600px;
+}
+.menu2 {
+	width: 1200px;
+	max-height: 1600px;
+
+}
+
+.menucolumn {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}

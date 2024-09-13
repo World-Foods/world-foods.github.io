@@ -329,7 +329,7 @@ File Name: responsive.css
 /*		 margin-left: 9%;*/
 	}
     .header {
-        padding: 27px 0px;
+        padding: 27px 0px 0px;
         height: inherit;
     }
     .header_full_banne {
@@ -468,4 +468,42 @@ File Name: responsive.css
             width: 100%;
             font-weight: bolder;
         }
+	
+	.menupage {
+		padding-top: 0px;
+	}
+	.menucolumn {
+	  float: none;
+	  width: 100%;
+	  margin-left: auto;
+	  margin-right: auto;
+	  padding: 0px 0px 5px 0px
+	}
+	
+	.menu1 {
+		width: 1800px;
+		max-height: 1000px;
+	}
+	.menu2 {
+		width: 1200px;
+		max-height: 1000px;
+
+	}
+	
+	.menumain {
+		 padding-bottom: 5px;
+		 padding-top: 5px;
+	}
+	
+	.footer {
+		 padding-top: 20px;
+		 text-align: center;
+	}
+	
+/* Responsive lightbox */
+	.lb-image, .lb-dataContainer, .lb-outerContainer { 
+    max-width: 100%; 
+    height: auto !important; 
+    width: 100% !important; 
+	}
 }
