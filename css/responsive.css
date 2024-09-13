@@ -412,7 +412,7 @@ File Name: responsive.css
         display: none;
     }
     .inner_page .header {
-        padding: 36px 10px 27px 10px;
+        padding: 36px 10px 5px 10px;
     }
     .inner_page .navigation.navbar {
         margin-top: 0px;
@@ -499,6 +499,21 @@ File Name: responsive.css
 		 padding-top: 20px;
 		 text-align: center;
 	}
+	
+	.header {
+     padding: 27px 10px;
+}
+	
+	.contact {
+     padding-bottom: 25px;
+     padding-top: 5px;
+}
+	
+	.about {
+     padding: 25px 0;
+     margin-top: 180px;
+}
+	
 	
 /* Responsive lightbox */
 	.lb-image, .lb-dataContainer, .lb-outerContainer { 
