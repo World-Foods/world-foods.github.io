@@ -1070,3 +1070,9 @@ ul.conta li a:hover {
   width: 50%;
   padding: 5px;
 }
+
+.lb-image, .lb-dataContainer, .lb-outerContainer { 
+    max-width: 100%; 
+    height: auto !important; 
+    width: 100% !important; 
+	}
