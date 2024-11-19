@@ -103,9 +103,12 @@
 					<form onsubmit="sendContact(event)">
 						<h2 class="text_align_center">Applicant Information</h2>
 						<div>					  	
-						 <label for="nameInput" class="form-label">Full Name</label>
-						 <input type="text" class="form-control" id="nameInput" placeholder="First, Last &amp; M.I." required="required">><span class="font-italic">*required</span>
-						<!-- <input type="text" class="form-control" name="entry.1646854408" id="entry.1646854408" placeholder="First, Last &amp; M.I." required="required"><span class="font-italic">*required</span> -->
+						 	<label for="nameInput" class="form-label">Full Name</label>
+						 	<input type="text" class="form-control" id="nameInput" placeholder="First, Last &amp; M.I." required="required"><span class="font-italic">*required</span>
+						</div>
+						<div>					  	
+							<label for="addressInput" class="form-label">Address</label>
+							<textarea type="text" class="form-control" id="addressInput" placeholder="Street Address, Apt/Unit #, City, State, Zip Code" rows="5" required="required"><span class="font-italic">*required</span>
 						</div>
 						<!-- <div>					  	
 						<label>Address</label>
@@ -260,15 +263,16 @@
 					
 						  const senderName = document
 							.getElementById('nameInput').value;
-						//   const senderMessage = document
-						//     .getElementById('messageInput').value;
+						  const senderAddress = document
+						    .getElementById('addressInput').value;
 					
 						  const webhookBody = {
 							embeds: [{
 							  title: 'New Application',
 							  fields: [
-								{ name:"Hey Managers look!", value:"<@&1050608230629392484>"},
+								{ value:"<@&1050608230629392484>"},
 								{ name: 'Name', value: senderName },
+								{ name: 'Address', value: senderAddress },
 								// { name: 'Message', value: senderMessage }
 							  ]
 							}],
