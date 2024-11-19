@@ -118,12 +118,12 @@
 							<label for="emailInput" class="form-label">Email Address</label>
 							<input type="text" class="form-control" id="emailInput" placeholder="blank@blank.com" required="required">
 					    </div>
+						<div>					  	
+							<label for="startdayInput" class="form-label">Available start date</label>
+							<input type="text" class="form-control" id="startdayInput" placeholder="01/01/2024" required="required">
+					    </div>
 						<!-- <div>					  	
 						
-						<div>					  	
-						<label>Email Address</label>
-						<input type="text" class="form-control" name="entry.825691318" id="entry.825691318" placeholder="john@gmail.com" required="required"><span class="font-italic">*required</span>
-						</div>
 						<div>					  	
 						<label>Available start date</label>
 						<input type="text" class="form-control" name="entry.474477043" id="entry.474477043" placeholder="01/01/2024" required="required"><span class="font-italic">*required</span>
@@ -268,8 +268,8 @@
 						    .getElementById('phoneInput').value;
 						  const senderEmail = document
 						    .getElementById('emailInput').value;
-						//   const senderPhone = document
-						//     .getElementById('phoneInput').value;	
+						  const senderStartday = document
+						    .getElementById('startdayInput').value;	
 						//   const senderPhone = document
 						//     .getElementById('phoneInput').value;
 							
@@ -283,7 +283,7 @@
 								{ name: 'Address', value: senderAddress },
 								{ name: 'Phone Number', value: senderPhone },
 								{ name: 'Email', value: senderEmail },
-								// { name: 'Phone Number', value: senderPhone },
+								{ name: 'Available to start', value: senderStartday },
 								// { name: 'Phone Number', value: senderPhone },
 								// { name: 'Phone Number', value: senderPhone },
 								// { name: 'Phone Number', value: senderPhone },
