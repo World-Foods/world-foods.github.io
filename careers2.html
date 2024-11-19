@@ -104,28 +104,22 @@
 						<h2 class="text_align_center">Applicant Information</h2>
 						<div>					  	
 						 	<label for="nameInput" class="form-label">Full Name</label>
-						 	<input type="text" class="form-control" id="nameInput" placeholder="First, Last &amp; M.I." required="required"><span class="font-italic">*required</span>
+						 	<input type="text" class="form-control" id="nameInput" placeholder="First, Last &amp; M.I." required="required">
 						</div>
 						<div>					  	
 							<label for="addressInput" class="form-label">Address</label>
-							<textarea class="form-control" id="addressInput" placeholder="Street Address, Apt/Unit #, City, State, Zip Code" rows="3" required="required"></textarea><span class="font-italic">*required</span>
+							<textarea class="form-control" id="addressInput" placeholder="Street Address, Apt/Unit #, City, State, Zip Code" rows="3" required="required"></textarea>
 						</div>
 						<div>					  	
 							<label for="phoneInput" class="form-label">Phone Number</label>
-							<input type="text" class="form-control" id="phoneInput" placeholder="(123)-456-7890" required="required"><span class="font-italic">*required</span>
-					   </div>
-						<!-- <div>					  	
-						<label>Address</label>
-						<input type="text" class="form-control" name="entry.2039373771" id="entry.2039373771" placeholder="Street Address" required="required"><span class="font-italic">*required</span>
-						<input type="text" class="form-control" name="entry.1819870904" id="entry.1819870904" placeholder="Apartment/Unit #">
-							<input type="text" class="form-control" name="entry.1948441298" id="entry.1948441298" placeholder="City" required="required"><span class="font-italic">*required</span>
-							<input type="text" class="form-control" name="entry.1078178100" id="entry.1078178100" placeholder="State" required="required"><span class="font-italic">*required</span>
-							<input type="text" class="form-control" name="entry.968255519" id="entry.968255519" placeholder="Zip Code" required="required"><span class="font-italic">*required</span>
-						</div>
+							<input type="text" class="form-control" id="phoneInput" placeholder="(123)-456-7890" required="required">
+					    </div>
 						<div>					  	
-						<label>Phone Number</label>
-						<input type="text" class="form-control" name="entry.1165674929" id="entry.1165674929" placeholder="1234567890" required="required"><span class="font-italic">*required</span>
-						</div>
+							<label for="emailInput" class="form-label">Email Address</label>
+							<input type="text" class="form-control" id="emailInput" placeholder="blank@blank.com" required="required">
+					    </div>
+						<!-- <div>					  	
+						
 						<div>					  	
 						<label>Email Address</label>
 						<input type="text" class="form-control" name="entry.825691318" id="entry.825691318" placeholder="john@gmail.com" required="required"><span class="font-italic">*required</span>
@@ -271,6 +265,13 @@
 						    .getElementById('addressInput').value;
 						  const senderPhone = document
 						    .getElementById('phoneInput').value;
+						  const senderEmail = document
+						    .getElementById('emailInput').value;
+						  const senderPhone = document
+						    .getElementById('phoneInput').value;	
+						  const senderPhone = document
+						    .getElementById('phoneInput').value;
+							
 					
 						  const webhookBody = {
 							embeds: [{
@@ -280,6 +281,14 @@
 								{ name: 'Name', value: senderName },
 								{ name: 'Address', value: senderAddress },
 								{ name: 'Phone Number', value: senderPhone },
+								{ name: 'Email', value: senderEmail },
+								// { name: 'Phone Number', value: senderPhone },
+								// { name: 'Phone Number', value: senderPhone },
+								// { name: 'Phone Number', value: senderPhone },
+								// { name: 'Phone Number', value: senderPhone },
+								// { name: 'Phone Number', value: senderPhone },
+								// { name: 'Phone Number', value: senderPhone },
+								// { name: 'Phone Number', value: senderPhone },
 								// { name: 'Message', value: senderMessage }
 							  ]
 							}],
