@@ -330,16 +330,15 @@ button .menu_button:hover {
      max-width: 100%;
 }
 
-.g-recaptcha {
-     height: 100%;
-     width: 100%;
-     position: absolute;
-     left: 0;
-     top: 0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-}
+.g-recaptcha{
+     margin: 15px auto !important;
+     width: auto !important;
+     height: auto !important;
+     text-align: -webkit-center;
+     text-align: -moz-center;
+     text-align: -o-center;
+     text-align: -ms-center;
+  }
 
 
 /**-- heading section --**/

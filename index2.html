@@ -349,22 +349,11 @@
                         <textarea  class="form-control" id="messageInput" rows="6"></textarea>
                      </div>
                      <br>
-                     <style>
-                        /* already defined in bootstrap4 */
-                        .text-xs-center {
-                            text-align: center;
-                        }
-                    
-                        .g-recaptcha {
-                            display: inline-block;
-                        }
-                     </style>
-                     <div class="text-xs-center">
-                        <div class="g-recaptcha" data-sitekey="6LftP4cqAAAAAO1-Xz3dekkQGb8VHXpT-0W9YT4R" data-callback="enableBtn"></div>
-                     </div>
+                     
+                     <div class="g-recaptcha" data-sitekey="6LftP4cqAAAAAO1-Xz3dekkQGb8VHXpT-0W9YT4R" data-callback="enableBtn"></div>
                      <div class="titlepage"></div>                 
                         <div class="col-md-12">
-                           <button class="read_more2" type="submit" id="button1" disabled="disabled">Contact Us!</button>
+                           <button class="read_more2" type="submit" id="button1" disabled="disabled">Contact Us</button>
                         </div>
                      </div>
                         <!-- <button class="g-recaptcha col-md-12" data-sitekey="6Lc3M4cqAAAAAESMXqkEGIIly-PNYiMyxtkhpPYN" data-callback='onSubmit' data-action='submit'>Contact Us!</button> -->
@@ -391,7 +380,7 @@
                   
                      const webhookBody = {
                         embeds: [{
-                        title: 'New Application',
+                        title: 'New Message',
                         fields: [
                            { name:'', value:"<@&1050608230629392484>"},
                            { name: 'Full Name', value: senderName },
