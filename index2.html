@@ -327,9 +327,8 @@
 				   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZy_N0a_c5sBQ3jGZY7S3Qhf-3xAXxqG7o4roAt3C3a0i2fQ/viewform?embedded=true" width="640" height="419" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 -->
 				<div>
-               <form id="contactusform" onsubmit="sendContact(event)">
+               <form id="contactusform">
                   <div class="row">
-                     <h2 class="text_align_center">Applicant Information</h2>
                      <div>					  	
                         <label for="nameInput" class="form-label">Full Name</label>
                         <input type="text" class="form-control" id="nameInput" placeholder="First, Last &amp; M.I." required="required">
@@ -352,7 +351,8 @@
                         <!-- <button class="form-control" type="submit">Contact Us!</button> -->
                         <button class="form-control" data-sitekey="6Lc3M4cqAAAAAESMXqkEGIIly-PNYiMyxtkhpPYN" data-callback='onSubmit' data-action='submit'>Contact Us!</button>
                      </div> 
-                  </form>
+                  </div>	
+               </form>
                   <script>
                      function onSubmit(token) {
                      document.getElementById("contactusform").submit();
@@ -402,7 +402,6 @@
                      }
                      }
                   </script>
-                 </div>	
                </div>
             </div>
          </div>
