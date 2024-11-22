@@ -327,7 +327,7 @@
 				   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZy_N0a_c5sBQ3jGZY7S3Qhf-3xAXxqG7o4roAt3C3a0i2fQ/viewform?embedded=true" width="640" height="419" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 -->
 				<div>
-               <form id="contactusform">
+               <form id="contactusform" onsubmit="onSubmit(token)">
                   <div class="row">
                      <div class = "col-md-6  col-12">					  	
                         <label for="nameInput" class="form-label">Full Name</label>
@@ -347,8 +347,8 @@
                      </div>
                      <br>
                      <div>
-                        <!-- <button class="form-control" type="submit">Contact Us!</button> -->
-                        <button class="g-recaptcha col-md-12" data-sitekey="6Lc3M4cqAAAAAESMXqkEGIIly-PNYiMyxtkhpPYN" data-callback='onSubmit' data-action='submit'>Contact Us!</button>
+                        <button class="col-md-12" data-sitekey="6Lc3M4cqAAAAAESMXqkEGIIly-PNYiMyxtkhpPYN" type="submit">Contact Us!</button>
+                        <!-- <button class="g-recaptcha col-md-12" data-sitekey="6Lc3M4cqAAAAAESMXqkEGIIly-PNYiMyxtkhpPYN" data-callback='onSubmit' data-action='submit'>Contact Us!</button> -->
                      </div> 
                   </div>	
                </form>
