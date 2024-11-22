@@ -328,82 +328,81 @@
 -->
 				<div>
                <form id="contactusform" onsubmit="sendContact(event)">
-						<h2 class="text_align_center">Applicant Information</h2>
-						<div>					  	
-						 	<label for="nameInput" class="form-label">Full Name</label>
-						 	<input type="text" class="form-control" id="nameInput" placeholder="First, Last &amp; M.I." required="required">
-						</div>
-						<div>					  	
-							<label for="phoneInput" class="form-label">Phone Number</label>
-							<input type="text" class="form-control" id="phoneInput" placeholder="(123)-456-7890" required="required">
-					   </div>
-						<div>					  	
-							<label for="emailInput" class="form-label">Email Address</label>
-							<input type="text" class="form-control" id="emailInput" placeholder="blank@blank.com" required="required">
-					   </div>
-						
-						<div>					  	
-							<label for="messageInput" class="form-label">Message</label>
-							<textarea  class="form-control" id="messageInput" rows="6"></textarea>
-					    </div>
-						<br>
-						<div>
-							<!-- <button class="form-control" type="submit">Contact Us!</button> -->
-                     <button class="g-recaptcha" 
-                     data-sitekey="6Lc3M4cqAAAAAESMXqkEGIIly-PNYiMyxtkhpPYN" 
-                     data-callback='onSubmit' 
-                     data-action='submit'>Contact Us!</button>
-						</div> 
-					</form>
-               <script>
-                  function onSubmit(token) {
-                    document.getElementById("contactusform").submit();
-                  }
-                </script>
-					<script>
-						async function sendContact(ev) {
-						  ev.preventDefault();
-					
-						  const senderName = document
-							.getElementById('nameInput').value;
-						  const senderPhone = document
-						    .getElementById('phoneInput').value;
-						  const senderEmail = document
-						    .getElementById('emailInput').value;
-						  const senderMessage = document
-						    .getElementById('messageInput').value;
-							
-					
-						  const webhookBody = {
-							embeds: [{
-							  title: 'New Application',
-							  fields: [
-								{ name:'', value:"<@&1050608230629392484>"},
-								{ name: 'Full Name', value: senderName },
-								{ name: 'Phone Number', value: senderPhone },
-								{ name: 'Email Address', value: senderEmail },
-								{ name: 'Message', value: senderMessage }
-							  ]
-							}],
-						  };
-					
-						  const webhookUrl = 'https://discord.com/api/webhooks/1309567102176202802/PP6ry9P_8ibQDGKI1U0dPywvTKk5oBMQP2Rif7MMut6pPcHA9SwiCbGF93K_f96gi2iN';
-					
-						  const response = await fetch(webhookUrl, {
-							method: 'POST',
-							headers: {
-							  'Content-Type': 'application/json',
-							},
-							body: JSON.stringify(webhookBody),
-						  });
-					
-						  if (response.ok) {
-							alert('I have received your message!');
-						  } else {
-							alert('There was an error! Try again later!');
-						  }
-						}
-					  </script>	
+                  <div class="row">
+                     <h2 class="text_align_center">Applicant Information</h2>
+                     <div>					  	
+                        <label for="nameInput" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="First, Last &amp; M.I." required="required">
+                     </div>
+                     <div>					  	
+                        <label for="phoneInput" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="phoneInput" placeholder="(123)-456-7890" required="required">
+                     </div>
+                     <div>					  	
+                        <label for="emailInput" class="form-label">Email Address</label>
+                        <input type="text" class="form-control" id="emailInput" placeholder="blank@blank.com" required="required">
+                     </div>
+                     
+                     <div>					  	
+                        <label for="messageInput" class="form-label">Message</label>
+                        <textarea  class="form-control" id="messageInput" rows="6"></textarea>
+                     </div>
+                     <br>
+                     <div>
+                        <!-- <button class="form-control" type="submit">Contact Us!</button> -->
+                        <button class="form-control" data-sitekey="6Lc3M4cqAAAAAESMXqkEGIIly-PNYiMyxtkhpPYN" data-callback='onSubmit' data-action='submit'>Contact Us!</button>
+                     </div> 
+                  </form>
+                  <script>
+                     function onSubmit(token) {
+                     document.getElementById("contactusform").submit();
+                     }
+                  </script>
+                  <script>
+                     async function sendContact(ev) {
+                     ev.preventDefault();
+                  
+                     const senderName = document
+                        .getElementById('nameInput').value;
+                     const senderPhone = document
+                        .getElementById('phoneInput').value;
+                     const senderEmail = document
+                        .getElementById('emailInput').value;
+                     const senderMessage = document
+                        .getElementById('messageInput').value;
+                        
+                  
+                     const webhookBody = {
+                        embeds: [{
+                        title: 'New Application',
+                        fields: [
+                           { name:'', value:"<@&1050608230629392484>"},
+                           { name: 'Full Name', value: senderName },
+                           { name: 'Phone Number', value: senderPhone },
+                           { name: 'Email Address', value: senderEmail },
+                           { name: 'Message', value: senderMessage }
+                        ]
+                        }],
+                     };
+                  
+                     const webhookUrl = 'https://discord.com/api/webhooks/1309567102176202802/PP6ry9P_8ibQDGKI1U0dPywvTKk5oBMQP2Rif7MMut6pPcHA9SwiCbGF93K_f96gi2iN';
+                  
+                     const response = await fetch(webhookUrl, {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(webhookBody),
+                     });
+                  
+                     if (response.ok) {
+                        alert('I have received your message!');
+                     } else {
+                        alert('There was an error! Try again later!');
+                     }
+                     }
+                  </script>
+                 </div>	
                </div>
             </div>
          </div>
