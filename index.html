@@ -25,6 +25,10 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"><br>
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
 	  <link href="lightbox/dist/css/lightbox.css" rel="stylesheet" />
+     <link rel="preconnect" href="https://www.google.com">
+      <link rel="preconnect" href="https://www.gstatic.com" crossorigin>   
+     <script src="https://www.google.com/recaptcha/api.js"></script>
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -326,26 +330,86 @@
 				   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZy_N0a_c5sBQ3jGZY7S3Qhf-3xAXxqG7o4roAt3C3a0i2fQ/viewform?embedded=true" width="640" height="419" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 -->
 				<div>
-                  <form name="gform" id="request" class="main_form" action="https://docs.google.com/forms/d/e/1FAIpQLScy2akT7hVx9VmmHJJYd72bmKyS-jORPcyR2U4f4WN2Z4DL3A/formResponse?usp=pp_url&entry.2055469053=name&entry.32172269=email&entry.1812225074=number&entry.641963140=message" target="hidden_iframe" onsubmit="submitted=true;">
-                     <div class="row">
-                        <div class="col-md-6  col-12">
-                           <input class="contactus" placeholder="Full Name" type="type" name="entry.2055469053" id="entry.2055469053"> 
-                        </div>
-                        <div class="col-md-6">
-                           <input class="contactus" placeholder="Email" type="type" name="entry.32172269" id="entry.32172269">                          
-                        </div>
-                        <div class="col-md-6">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="entry.1812225074" id="entry.1812225074">                          
-                        </div>
-                        <div class="col-md-6">
-                           <textarea class="textarea" placeholder="Message" type="type" name="entry.641963140" id="entry.641963140"></textarea>
-                        </div>
+               <form id="contactusform" onsubmit="sendContact(event)">
+                  <div class="row">
+                     <div class = "col-md-6  col-12">					  	
+                        <label for="nameInput" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="First, Last &amp; M.I." required="required">
+                     </div>
+                     <div class="col-md-6">					  	
+                        <label for="phoneInput" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="phoneInput" placeholder="(123)-456-7890" required="required">
+                     </div>
+                     <div class="col-md-6">					  	
+                        <label for="emailInput" class="form-label">Email Address</label>
+                        <input type="text" class="form-control" id="emailInput" placeholder="blank@blank.com" required="required">
+                     </div> 
+                     <div class="col-md-6">					  	
+                        <label for="messageInput" class="form-label">Message</label>
+                        <textarea  class="form-control" id="messageInput" rows="6"></textarea>
+                        <br>
+                     </div>
+                     <div class ="col-md-12">
+                        <div class="g-recaptcha" data-sitekey="6LftP4cqAAAAAO1-Xz3dekkQGb8VHXpT-0W9YT4R" data-callback="enableBtn"></div>
+                     </div>
+                     <div class="titlepage"></div>                 
                         <div class="col-md-12">
-                           <button class="send_btn" type="submit">Submit</button>
+                           <br>
+                           <button class="read_more2" type="submit" id="button1" disabled="disabled">Contact Us!</button>
                         </div>
                      </div>
-                  </form>
-					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                        <!-- <button class="g-recaptcha col-md-12" data-sitekey="6Lc3M4cqAAAAAESMXqkEGIIly-PNYiMyxtkhpPYN" data-callback='onSubmit' data-action='submit'>Contact Us!</button> -->
+                  </div>	
+               </form>
+                  <script>
+                     function enableBtn(){
+                        document.getElementById("button1").disabled = false;
+                     }
+                  </script>
+                  <script>
+                     async function sendContact(ev) {
+                     ev.preventDefault();
+                  
+                     const senderName = document
+                        .getElementById('nameInput').value;
+                     const senderPhone = document
+                        .getElementById('phoneInput').value;
+                     const senderEmail = document
+                        .getElementById('emailInput').value;
+                     const senderMessage = document
+                        .getElementById('messageInput').value;
+                        
+                  
+                     const webhookBody = {
+                        embeds: [{
+                        title: 'New Message',
+                        fields: [
+                           { name:'', value:"<@&1050608230629392484>"},
+                           { name: 'Full Name', value: senderName },
+                           { name: 'Phone Number', value: senderPhone },
+                           { name: 'Email Address', value: senderEmail },
+                           { name: 'Message', value: senderMessage }
+                        ]
+                        }],
+                     };
+                  
+                     const webhookUrl = 'https://discord.com/api/webhooks/1309567102176202802/PP6ry9P_8ibQDGKI1U0dPywvTKk5oBMQP2Rif7MMut6pPcHA9SwiCbGF93K_f96gi2iN';
+                  
+                     const response = await fetch(webhookUrl, {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(webhookBody),
+                     });
+                  
+                     if (response.ok) {
+                        alert('I have received your message!');
+                     } else {
+                        alert('There was an error! Try again later!');
+                     }
+                     }
+                  </script>
                </div>
             </div>
          </div>
